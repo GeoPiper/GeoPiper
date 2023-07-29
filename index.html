@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoPiper: Meeting Data Where It Lives</title>
+</head>
+
+<body>
+  {{> navbar }}
+  <main>
+
+    <!-- Header -->
+    <header class="hero is-medium is-primary">
+      <div class="hero-body container">
+        <h1 class="title is-1">GeoPiper</h1>
+        <h2 class="subtitle is-3">Meeting Data Where It Lives</h2>
+        <p class="block">
+          Finding, accessing, and subsettting earth system data is one of the largest bottle necks to research and
+          operations. GeoPiper seeks to eliminate the need to download, store and format data by "meeting data where it
+          lives", to provide a streamline, language agnostic way to get the data you need to solve the problems you
+          have.
+        </p>
+      </div>
+    </header>
+
+    <!-- Metrics -->
+    <section id="metrics">
+      <div class="notification is-dark is-radiusless">
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Unique Datasets</p>
+              <p class="title is-1" data-value=107000 data-plus></p>
+            </div>
+          </div>
+
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Data Providers</p>
+              <p class="title is-1" data-value=2000 data-plus></p>
+            </div>
+          </div>
+
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Fees</p>
+              <p class="title is-1">&#216;</p>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Information -->
+    <section id="about" class="section container">
+      <h1 class="title has-text-centered is-2">What is the GeoPiper Framework?</h1>
+      <div class="tiles">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification has-background-grey-lighter">
+              <p class="title">Federated Data Catalog</p>
+              <p class="block">GeoPiper collects, validates, and harmomizes a catalog of information describing where
+                open data lives, how it is structured, and the spatial, temporal, and thematic domains it covers. We
+                explictly avoid deeply nested list structures for data dissemination to make it easier to find, ingest,
+                and share source data.</p>
+            </article>
+          </div>
+
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification has-background-grey-lighter">
+              <p class="title">Language-agnostic Framework</p>
+              <p class="block">
+                The catalog on its own is a key GeoPiper products, but in addtion we supply a variety of
+                software for accessing data in the catalog using R and Python.
+              </p>
+              <p class="block">
+                In addition to data access libraries we provide a number of open source libraries for summarizing and
+                aggregating data products to answer a range of multiscalar problems in a consistent platform.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who's Using -->
+    <section>
+      <div class="notification is-dark is-radiusless">
+        <p class="title has-text-centered">Who's Using the GeoPiper Framework?</p>
+        <nav id="logos" class="level is-justify-content-space-around is-align-items-center">
+          <figure class="image is-logo"><img src="/usgs.svg"></figure>
+          <figure class="image is-logo"><img src="/noaa.svg"></figure>
+          <figure class="image is-logo"><img src="/lynker.png"></figure>
+        </nav>
+      </div>
+    </section>
+
+    <!-- How does it work? -->
+    <section class="section container">
+      <h1 class="title has-text-centered is-2">How does it work?</h1>
+
+      <div class="tiles">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent is-vertical">
+
+            <div class="tile card is-child">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Flat Data Catalog</p>
+                  <p class="block">We aim to buildo nested lists, stores mimiaml information to effectivly describe the
+                    spatial, temporal and theamic information of a data set. Set to crawl over thousands of identifed
+                    sources of high quality to document hundreds of thousands web acccessable data products and the
+                    approriate access protocols</p>
+                  <p class="block">GeoPiper provides three a flat data catalog of federated data sources that are web
+                    acccessable via JSON and Parquet files through the public Lynker s3 bucket. Additonally, it provides
+                    a set of tools to extract, data from a set remote resource into an in memory object. </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tile card is-child">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Automatic Updates & Growing</p>
+                  <p class="block">Maintaining a collection of hundreds of thousands of resources is not manually
+                    feasable. To overcome this we have identifed a set of critical data and methods for automatically
+                    describing resources as catalog elements.</p>
+                  <p class="block">We have implemented CI/CD routines that run monthly to ensure resources are avaiable
+                    and havent changed and developed.vValidators are used to ensure that accurate data is returned.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tile card is-child">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Search & Query</p>
+                  <p class="block">A challenge with so many possible resources is the abilty to search a find the
+                    approariate data for a given problem. Our tools provide a (currently) primative NLP process to
+                    discover viable dataset for your needs. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile is-parent is-vertical">
+            <div class="tile card is-child">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Programmatic Extraction</p>
+                  <p class="block">We support both R and Python packages to extract data from catalog elements for
+                    provided spatial and temporal bounds.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tile card is-child">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Aggregation & Summary</p>
+                  <p class="block">...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tile card is-child">
+              <div class="card-content">
+                <div class="content">
+                  <p class="title is-4">Free Open Resources with Targeted Consulting</p>
+                  <p class="block">The core data and software behind GeoPiper will always be a public resource. We will
+                    continue developing, supporting, and extending the resources here. As you might guess, building
+                    these tools exposes our team to the nuances of the datasets and processes needs to make the most of
+                    them. If you are interested in how these can contribute to your indivudal needs please reach out.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <section id="team" class="section container">
+      {{> team }}
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="section container">
+      <h2 class="title is-4">Have questions or comments? Please contact us.</h2>
+      <a class="box notification is-primary mx-6 has-text-centered has-text-weight-bold"
+        href="mailto:jjohnson@lynker.com">
+        <span class="icon-text">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          jjohnson@lynker.com
+        </span>
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  {{> footer }}
+
+  <script type="module" src="/main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

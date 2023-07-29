@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+$geopiper-primary: #7ac94c;
+
+$primary: $geopiper-primary;
+
+@import "bulma/bulma";
+
+html {
+    scroll-behavior: smooth;
+}
+
+main > header:first-child {
+    perspective: 500px;
+    overflow: hidden;
+    // background-image: linear-gradient(to bottom, $primary 50%, $background 100%)
+}
+
+main > header:first-child:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: 25px 25px;
+    background-image:
+        linear-gradient(to right, $primary 1px, transparent 1px),
+        linear-gradient(to bottom, $primary 1px, transparent 1px);
+    transform: rotateX(20deg);
+    transform-origin: top center;
+    animation: 30s linear infinite crawlingWall;
+    background-position-y: top;
+    background-repeat: repeat;
+    mix-blend-mode: soft-light;
+    z-index: -1;
+}
+
+@keyframes crawlingWall {
+    to {
+        background-position-y: bottom;
+    }
+}
+
+.nav-bg {
+    background-color: transparent !important;
+    transition: all 0.25s ease-in-out;
+}
+
+nav.level {
+    display: flex;
+    width: 75% !important;
+    gap: 3rem;
+    margin: auto;
+}
+
+figure.is-logo {
+    width: 10rem;
+    filter: brightness(0) invert(0.9);
+}
+
+footer > div {
+    width: 50%;
+    margin: auto;
+}
+
+#funding-logo figure {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#funding-logo figure:before {
+    content: '';
+    height: 100%;
+}
+#funding-logo figure:after {
+    content: '';
+    height: 100%;
+}
